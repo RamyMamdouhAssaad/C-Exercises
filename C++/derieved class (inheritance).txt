@@ -1,0 +1,41 @@
+
+class Rectangle
+{
+protected  : int width ;
+             int height ; 
+
+public : 
+            void display ()
+            {
+            cout<<width<<" "<<height<<endl ; 
+            }
+
+};
+
+class RectangleArea:public Rectangle
+{
+protected : 
+            int area ; 
+public: 
+
+void read_input()
+        {
+        scanf("%d" , &width) ;
+        scanf("%d" , &height) ; 
+        Area() ;
+        }
+void Area()
+        {
+        area= width*height ;
+        }
+        
+void display ()
+        {
+        cout<<area<<endl ; 
+        }
+
+
+
+};
+
+

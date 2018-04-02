@@ -1,0 +1,48 @@
+string timeConversion(string s) {
+    stringstream ss (s);
+    
+    stringstream ssd ;
+    int zero =0 ; 
+    int hours=0 ; 
+    int minutes =0 ;
+    int seconds =0  ; 
+    char delimiter =':' ;
+    string ampm ; 
+    ss>>hours>>delimiter>>minutes>>delimiter>>seconds>>ampm ;
+   
+    if(ampm=="AM"&& hours==12)
+    {
+        hours=0 ; 
+    }
+    if(ampm=="PM" &&hours!=12)
+    {
+        hours =hours+12 ; 
+    } 
+    if(hours<10)
+    {
+    ssd<<zero<<hours<<delimiter ; 
+    }
+    else
+    {
+    ssd<<hours<<delimiter ;
+    }
+    if(minutes<10)
+    {
+    ssd<<zero<<minutes<<delimiter ; 
+    }
+    else
+    {
+    ssd<<minutes<<delimiter ;
+    }
+     if(seconds<10)
+    {
+    ssd<<zero<<seconds ; 
+    }
+    else
+    {
+    ssd<<seconds ;
+    }
+
+    string str=ssd.str() ; 
+    return str ; 
+}

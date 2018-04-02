@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <cstdlib>
+using namespace std;
+
+
+int main() {
+    int n ,q,vNumber ; 
+   scanf("%d" , &n) ;
+   scanf("%d" , &q) ; 
+    std::vector<int> v[n] ;
+    std::vector<int> * ptrvec[n];
+    for(int i =0 ; i<n  ; i++)
+    {
+     scanf("%d" , &vNumber) ;   
+     ptrvec[i] = &v[i];
+     for(int j=0 ; j<vNumber ; j++)
+        {  
+           int xyz ; 
+           scanf("%d" , &xyz) ;
+           v[i].push_back(xyz) ;
+        }  
+     }
+   for(int i=0 ; i<q ; i++)
+    { 
+    int index,k ; 
+    scanf("%d" , &index) ;
+    scanf("%d" , &k) ; 
+   // cout<<ptrvec[index]<<endl ;    
+    int result = (*ptrvec[index])[k];
+    //cout<<ptrvec[index] <<endl;
+    //int result =(int)(*ptrvec[index]) ;
+    cout<<result <<endl ;   
+    
+    }
+    return 0;
+}

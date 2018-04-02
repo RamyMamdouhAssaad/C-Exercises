@@ -1,0 +1,28 @@
+int diagonalDifference(vector<vector<int>> a) {
+  int pDiagonal = 0 ; 
+  int sDiagonal = 0 ; 
+  int sDiagonali=0  ; 
+  int sDiagonalj=a.size()-1 ;   
+for(int i =0 ;i<a.size() ;i++)
+{
+
+    for(int j =0 ; j<a[i].size() ; j++)
+    {
+            if(i==j)
+            {
+             pDiagonal=pDiagonal+a[i][j] ;
+            }
+            if(j==sDiagonalj && sDiagonali==i )
+            {
+            sDiagonal=sDiagonal+a[i][j];
+            sDiagonalj-- ; 
+            sDiagonali++ ;     
+            }
+        
+    }
+
+}
+ int result = abs(pDiagonal-sDiagonal)   ; 
+    return result ;
+    
+}

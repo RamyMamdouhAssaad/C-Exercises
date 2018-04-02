@@ -1,0 +1,27 @@
+void miniMaxSum(vector<int> arr) {
+   long maximum =-999999999999999999999999999999 ; 
+    long minimum= 999999999999999999999999999999 ; 
+    
+    for(int i =0 ; i<arr.size();i++)
+    {
+        long result= 0 ;
+    for(int j=0 ; j<arr.size() ; j++)
+    {
+                if(i!=j)
+                {
+                result=result+arr[j];
+                }
+
+    }
+        if(result<minimum)
+        {
+        minimum=result ; 
+        }
+        if(result>maximum)
+        {
+        maximum=result ; 
+        }
+
+    }
+cout<<minimum<<" "<<maximum<<endl  ;
+}
